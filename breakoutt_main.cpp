@@ -8,9 +8,9 @@
 #define DELTA_TIME   ((float) 1 / (float)FPS)
 #define MAX_UPDATES 5
 
-#define RED (Color(1.0f, 0.0f, 0.0f, 1.0f))
+#define RED   (Color(1.0f, 0.0f, 0.0f, 1.0f))
 #define GREEN (Color(0.0f, 1.0f, 0.0f, 1.0f))
-#define BLUE (Color(0.0f, 0.0f, 1.0f, 1.0f))
+#define BLUE  (Color(0.0f, 0.0f, 1.0f, 1.0f))
 #define WHITE (Color(1.0f, 1.0f, 1.0f, 1.0f))
 
 Indices BallIndices = {nullptr, 0, 0};
@@ -161,6 +161,7 @@ int main(void) {
 
         // Regenerate ball vertices with new position
         ball.UpdateBall();
+
         // Regenerate Tile vertices with new position
         tile.UpdateTile();
 
@@ -173,11 +174,9 @@ int main(void) {
         calculate_fps(&last_time, &frame_count);
         SDL_GL_SwapWindow(window);
     }
-
     // Destroy window
     SDL_DestroyWindow(window);
     // Quit SDL subsystems
     SDL_Quit();
-
     return 0;
 }
